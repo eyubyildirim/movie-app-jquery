@@ -1,0 +1,40 @@
+.header {
+  z-index: 2;
+  overflow: visible;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 1em;
+  width: 100%;
+  background-color: var(--surface-background);
+  height: 62px;
+}
+
+.header-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header-buttons-container {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.header-title,
+.header-title:hover,
+.header-title:active,
+.header-title:visited {
+  color: var(--primary-text);
+  font-size: x-large;
+  text-decoration: none;
+  flex-grow: 1;
+}
+
+.header-button {
+  color: var(--secondary-text);
+  text-decoration: none;
+}

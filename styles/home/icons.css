@@ -1,0 +1,28 @@
+.fav-icon-container {
+  color: var(--primary-text);
+  position: relative;
+  z-index: 1;
+}
+
+.fav-icon-container::before {
+  content: "";
+  position: absolute;
+  top: 5%;
+  left: 0%;
+  width: 100%;
+  aspect-ratio: 1;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 100%;
+  z-index: -1;
+
+  transform: scale(0);
+}
+
+.fav-icon-container:hover::before {
+  transform: scale(1.75);
+}
+
+.rating-icon {
+  color: var(--highlight-accent);
+  font-size: 11pt;
+}

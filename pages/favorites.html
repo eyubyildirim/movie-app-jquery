@@ -2,11 +2,11 @@
 <html lang="en">
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script type="module" src="./script.js"></script>
-    <link rel="stylesheet" href="styles/home/root.css" />
-    <link rel="stylesheet" href="styles/home/header.css" />
-    <link rel="stylesheet" href="styles/home/icons.css" />
-    <link rel="stylesheet" href="styles/home/main.css" />
+    <script type="module" src="../scripts/favorites.js"></script>
+    <link rel="stylesheet" href="../styles/home/root.css" />
+    <link rel="stylesheet" href="../styles/home/header.css" />
+    <link rel="stylesheet" href="../styles/home/icons.css" />
+    <link rel="stylesheet" href="../styles/home/main.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
@@ -18,21 +18,13 @@
         <a href="/index.html" class="header-title">Movie App</a>
         <div class="header-buttons-container">
           <a href="/index.html" id="home-button" class="header-button">Home</a>
-          <a
-            href="./pages/favorites.html"
-            id="favorites-button"
-            class="header-button"
+          <a href="/favorites.html" id="favorites-button" class="header-button"
             >Favorites</a
           >
         </div>
       </div>
     </header>
-    <main>
-      <form class="search-bar" action="#">
-        <input id="search-input" type="text" class="search-input" />
-      </form>
-      <div class="movies-grid"></div>
-    </main>
+    <main class="movies-grid" style="margin-top: 62px"></main>
     <script
       src="https://kit.fontawesome.com/34198da445.js"
       crossorigin="anonymous"

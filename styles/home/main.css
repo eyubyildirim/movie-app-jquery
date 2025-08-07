@@ -1,0 +1,126 @@
+.search-bar {
+  margin-top: 62px;
+  display: flex;
+  flex-direction: row;
+  background-color: var(--surface-background);
+  border-radius: 0 0 12px 12px;
+  padding: 0.5em;
+}
+
+.movie-details-main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 62px;
+  padding: 1em;
+  gap: 18px;
+}
+
+.search-input {
+  flex-grow: 1;
+  background-color: var(--primary-background);
+  border: none;
+  outline: none;
+  color: var(--secondary-text);
+  padding: 0.5em 1em;
+  border-radius: 12px;
+}
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+@media screen and (max-width: 960px) {
+  .movies-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .movies-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .movies-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.movie-item-container {
+  background-color: var(--surface-background);
+  overflow: hidden;
+  box-sizing: border-box;
+  user-select: none;
+  padding: 1.25em;
+  margin: 0.5em;
+  border-radius: 10px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.movie-item {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  gap: 12px;
+}
+
+.movie-item-image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+hr.solid {
+  border-top: 1px solid #bbb;
+  margin: 0;
+}
+
+.movie-item-title-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 0.5em;
+  color: var(--primary-text);
+}
+
+.movie-item-title {
+  flex: 1;
+  font-weight: 700;
+  font-size: large;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.movie-item-rating {
+  color: var(--primary-text);
+}
+
+.horizontal-slider-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.horizontal-slider-title {
+  font-size: xx-large;
+  color: var(--primary-text);
+  font-weight: 700;
+}
+
+.horizontal-slider {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  overflow-y: hidden;
+  gap: 1em;
+  scrollbar-width: 0;
+}
+
+.horizontal-slider::-webkit-scrollbar {
+  display: none;
+}
