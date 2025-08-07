@@ -43,7 +43,7 @@ $("#search-input").on("input", function () {
     clearTimeout(timeout);
   }
 
-  timeout = setTimeout(async () => await searchQuery(currentText), 3000);
+  timeout = setTimeout(async () => await searchQuery(currentText), 1000);
 });
 
 $(".search-bar").on("submit", async function (e) {
