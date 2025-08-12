@@ -2,16 +2,23 @@
 
 export const FAVORITES_KEY = "user_favorites";
 
+/**
+ * Fetches a list of popular movies from TMDb.
+ *
+ * @returns {Promise<import("./typedefs/movies").SearchResponse>}
+ */
 export const getPopularMovies = async () => {
   const url = "https://api.themoviedb.org/3/movie/popular";
   const headers = {
     Authorization: "replace-api-token",
   };
 
-  return await fetch(url, {
-    method: "GET",
-    headers,
-  });
+  return await (
+    await fetch(url, {
+      method: "GET",
+      headers,
+    })
+  ).json();
 };
 
 /**

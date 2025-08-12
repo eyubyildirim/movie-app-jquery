@@ -114,15 +114,17 @@ export const generateDetailsCard = (movieDetails) => {
           <div class="details-container">
             <span class="details-title">Production Companies</span>
             <div class="production-companies">
-              ${movieDetails.production_companies.map((v) => {
-                if (!v.logo_path) return null;
-                return `
+              ${movieDetails.production_companies
+                .filter((v) => v.logo_path)
+                .map(
+                  (v) => `
                     <img
                         class="production-image"
                         src="https://image.tmdb.org/t/p/w500${v.logo_path}"
                     />
-                `;
-              })}
+                `
+                )
+                .join("")}
             </div>
           </div>
         </div>
