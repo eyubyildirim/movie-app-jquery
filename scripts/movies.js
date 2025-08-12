@@ -86,9 +86,11 @@ export const getFavorites = () => {
 
   if (favorites) {
     /**
-     * @type {string[]}
+     * Parse and cast favorites to an array of numbers.
+     * @type {number[]}
      */
-    return JSON.parse(favorites);
+    const parsedFavorites = JSON.parse(favorites);
+    return parsedFavorites;
   }
 
   return [];
